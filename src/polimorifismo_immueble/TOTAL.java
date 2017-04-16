@@ -5,6 +5,7 @@
  */
 package polimorifismo_immueble;
 
+import INTERFAZ.OPERACIONES;
 import java.util.Scanner;
 
 /**
@@ -18,18 +19,17 @@ public class TOTAL {
     public static void main(String[] args) {
         
         int ingresar;
-        
+        int ingresar2;
         
         //codigo para poder preguntar y al,acenar algo q esscribes de3 un programa
         
-        System.out.println("Inmuhebles");
-        System.out.println("1 Terreno");
-        System.out.println("2 Casa");
-        System.out.println("3 Departamento");
         
+        System.out.println("Inmuhebles y figuras geometricas\n");
         Scanner sc=new Scanner(System.in);
-        System.out.printf("escoja un aopcion: ");
+        System.out.printf("Escoja un aopcion: "+"\n1 Terreno"+"\n2 Casa"+"\n3 Departamento"+"\n4 Figuras Geometricas");
         ingresar=sc.nextInt();
+        
+       
         
         switch(ingresar){
             case 1:
@@ -76,7 +76,25 @@ public class TOTAL {
                 System.out.println(avaluar_depa);
                 System.out.println(ob2.comisionar_venta(avaluar_depa));
                 break;
-                
+            case 4:
+                OPERACIONES op = new OPERACIONES();                
+                Scanner sc2=new Scanner(System.in);
+                System.out.printf("\nEscoja un aopcion: "+"\nConocer area y perimetro de::\n"+"1 Cuadrado\n"+ "2 Rectangulo\n"+"3 Triangulo Equilatero");
+                ingresar2=sc.nextInt();
+                switch(ingresar2){
+                    case 1:
+                        op.cuadrado();
+                        break;
+                    case 2:
+                        op.rectangulo();
+                        break;
+                    case 3:
+                        op.triangulo();
+                        break;
+                    default:
+                        System.out.println("La opción que ingresastes no existe");
+                    } 
+                break;
             default:
                 System.out.println("La opción que ingresastes no existe");
                 

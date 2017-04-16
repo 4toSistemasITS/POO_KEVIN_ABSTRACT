@@ -10,8 +10,7 @@ package INTERFAZ;
  * @author ITFNSR_4
  */
 public interface FIGURA_GEOMETRICA {
-    public abstract double area();
-    public abstract double perimetro(int valor);
-   
-    
+    public abstract void cuadrado();
+    public abstract void rectangulo();
+    public abstract void triangulo();
 }
